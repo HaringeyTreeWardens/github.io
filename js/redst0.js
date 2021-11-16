@@ -1,4 +1,4 @@
-var sw_targ=true; var ff_targ=''; var qs= querySt('t'); switch(qs) {// https://haringeytreewardens.github.io/rd.htm? S:\szdocuments\2hosts\github\codespaces\haringeytreewardens.github.io
+var sw_targ=true; var ff_targ=''; var qs= querySt('t'); switch(qs) {// https://haringeytreewardens.github.io/redir/rd.htm? S:\szdocuments\2hosts\github\codespaces\haringeytreewardens.github.io
 // StART  // bit.ly/stxxx https://haringeytreewardens.github.io/redir/rd.htm?t=htw2x //bit.ly/sthist goes directly to my gsheet
 case 'htw22'    :ff_targ='https://www.dropbox.com/s/l16gvk9mq8jh8l4/StART%20Timeline.xlsx?dl=0';
 ff_targ_text='htwART History';  break; // bit.ly/HaringeyTreeWardens https://haringeytreewardens.github.io/rd.htm?t=htw22
