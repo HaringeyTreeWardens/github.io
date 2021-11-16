@@ -1,7 +1,8 @@
 var sw_targ=true; var ff_targ=''; var qs= querySt('t'); switch(qs) {// https://haringeytreewardens.github.io/redir/rd.htm? S:\szdocuments\2hosts\github\codespaces\haringeytreewardens.github.io
 // StART  // bit.ly/stxxx https://haringeytreewardens.github.io/redir/rd.htm?t=htw2x //bit.ly/sthist goes directly to my gsheet
-case 'htw22'    :ff_targ='https://www.dropbox.com/s/l16gvk9mq8jh8l4/StART%20Timeline.xlsx?dl=0';
-ff_targ_text='htwART History';  break; // bit.ly/HaringeyTreeWardens https://haringeytreewardens.github.io/redir/rd.htm?t=htw22
+case 'htw22'    :ff_targ='https://haringeytreewardens.github.io/index.htm?t=htw22';
+ff_targ_text='Haringey Tree Wardens';  break; // bit.ly/HaringeyTreeWardens https://bit.ly/haringeytreewardens https://haringeytreewardens.github.io/redir/rd.htm?t=htw22
+
 case 'htw29'    :ff_targ='https://www.dropbox.com/s/ucqdmy6f1qa1hgb/%C2%A350m%20funding%20contacts.xlsx?dl=0'; 
 ff_targ_text='htwART funding prospects'; break; // bit.ly/stdb50m https://haringeytreewardens.github.io/redir/rd.htm?t=htw29
 case 'htw33a'    :ff_targ='https://www.eventbrite.co.uk/e/start-annual-general-meeting-2018-tickets-49901909956'; 
