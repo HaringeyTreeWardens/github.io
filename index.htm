@@ -1,2 +1,57 @@
-<!DOCTYPE HTML><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE HTML><html lang=en"<title>Haringey TreeWardens</title>><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head><body>Please bear with us whilst we update this site</body></html>
+
+
+<!doctype html><html lang=en><head><title>TreeWardens</title><meta charset=utf-8>
+<style>* {box-sizing: border-box;}
+#video-background {background: #000; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -99;}
+#vidtop-content {top: 0;color: #fff;}
+#video-foreground, #video-background {position: absolute;top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
+#vidtop-content {top: 0;color: #fff;}
+.vid-inf22 {position: absolute; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-inf22 h2 { font-size: 2rem; font-weight: 500; margin-top: 0; }
+.vid-inf22 a {display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center;}
+@media (min-aspect-ratio: 16/9) {  .video-foreground { height: 300%; top: -100%; }}
+@media (max-aspect-ratio: 16/9) {  .video-foreground { width: 300%; left: -100%; }}
+@media all and (max-width: 600px) {.vid-inf22 { width: 50%; padding: .5rem; } .vid-inf22 h2 { margin-bottom: .2rem; }}
+@media all and (max-width: 500px) {.vid-inf22 .acronym { display: none; }}</style></head><body>
+<div id="video-background"><div id="video-foreground"></div></div>
+
+<div id="vidtop-content"><div class="vid-inf22" style="width: 55%; font-size: 1rem; top: 0; left:0">Tree Wardens</div>
+<div class="vid-inf22" style="width: 75%; font-size: 0.8rem; bottom:0; right:0;">Local people caring about trees - click here for more info</div></div>
+	 
+<script>/*
+function onPlayerReady(event) {console.log('begun',vIndex, ' video:',szvIDs[vIndex]);
+event.target.cueVideoById({videoId: szvIDs[vIndex].vID,
+	szSecsBeg: szvIDs[vIndex].szSecsBeg, szSecsEnd: szvIDs[vIndex].szSecsEnd}); event.target.playVideo(); }
+
+function onPlayerStateChange(event) {
+	if (event.data === YT.PlayerState.ENDED) {console.log('ended',vIndex);
+		if (vIndex < szvIDs.length - 1) {
+            event.target.loadVideoById({
+              videoId: szvIDs[vIndex].vID, szSecsBeg: szvIDs[vIndex].szSecsBeg, szSecsEnd: szvIDs[vIndex].szSecsEnd
+            });
+            vIndex++;
+        }
+    }
+} */
+</script>
+<div id="player"></div><!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+<script>let vIndex=0;const szvIDs=[
+    {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 }, {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 },
+    {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 }, {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 },
+    {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 } ];
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');  tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // 3. This function creates an <iframe> (and YouTube player) after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {player = new YT.Player('player', {height: szvIDs[vIndex].szheight, width: szvIDs[vIndex].szwidth, videoId: szvIDs[vIndex].vID, playerVars: {'playsinline': 1 },
+        events: {'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange} });   }
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {event.target.playVideo();}
+    // 5. The API calls this function when the player's state changes. The function indicates that when playing a video (state=1), the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {if (event.data == YT.PlayerState.PLAYING && !done) {setTimeout(stopVideo, 6000); done = true; }      }
+    function stopVideo() {player.stopVideo();}</script>
+</body></html>
