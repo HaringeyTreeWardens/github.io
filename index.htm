@@ -1,8 +1,4 @@
-<!DOCTYPE HTML><html lang=en"<title>Haringey TreeWardens</title>><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head><body>Please bear with us whilst we update this site</body></html>
-
-
-<!doctype html><html lang=en><head><title>TreeWardens</title><meta charset=utf-8>
+<!DOCTYPE HTML><html lang=en"><title></title><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>* {box-sizing: border-box;}
 #video-background {background: #000; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -99;}
 #vidtop-content {top: 0;color: #fff;}
@@ -17,8 +13,8 @@
 @media all and (max-width: 500px) {.vid-inf22 .acronym { display: none; }}</style></head><body>
 <div id="video-background"><div id="video-foreground"></div></div>
 
-<div id="vidtop-content"><div class="vid-inf22" style="width: 55%; font-size: 1rem; top: 0; left:0">Tree Wardens</div>
-<div class="vid-inf22" style="width: 75%; font-size: 0.8rem; bottom:0; right:0;">Local people caring about trees - click here for more info</div></div>
+<div id="vidtop-content"><div class="vid-inf22" style="width: 55%; font-size: 1rem; top: 0; left:0">Haringey Tree Wardens</div>
+<div class="vid-inf22" style="width: 75%; font-size: 0.8rem; bottom:0; right:0;">Haringey TreeWardens - Local people caring about trees<a target="_blank" href="https://bit.ly/haringeytreewardens">click here for more info</a></div></div>
 	 
 <script>/*
 function onPlayerReady(event) {console.log('begun',vIndex, ' video:',szvIDs[vIndex]);
@@ -37,10 +33,10 @@ function onPlayerStateChange(event) {
 } */
 </script>
 <div id="player"></div><!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-<script>let vIndex=0;const szvIDs=[
-    {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 }, {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 },
-    {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 }, {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 },
-    {vID:'Qzgf3gHQdJI', szheight:390, szwidth:640, szSecsBeg: 0, szSecsEnd: 15000 } ];
+<script>const szstdwid=1280, szstdht=720, szVidName='Qzgf3gHQdJI';let vIndex=0;const szvIDs=[
+    {vID:szVidName, szheight:szstdht, szwidth:szstdwid, szSecsBeg: 0, szSecsEnd: 15000, szSecsLen: 96000 }, {vID:szVidName, szheight:szstdht, szwidth:szstdwid, szSecsBeg: 0, szSecsEnd: 15000, szSecsLen: 96000 },
+    {vID:szVidName, szheight:szstdht, szwidth:szstdwid, szSecsBeg: 0, szSecsEnd: 15000, szSecsLen: 96000 }, {vID:szVidName, szheight:szstdht, szwidth:szstdwid, szSecsBeg: 0, szSecsEnd: 15000, szSecsLen: 96000 },
+    {vID:szVidName, szheight:szstdht, szwidth:szstdwid, szSecsBeg: 0, szSecsEnd: 15000, szSecsLen: 96000 } ];
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');  tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -52,6 +48,6 @@ function onPlayerStateChange(event) {
     function onPlayerReady(event) {event.target.playVideo();}
     // 5. The API calls this function when the player's state changes. The function indicates that when playing a video (state=1), the player should play for six seconds and then stop.
     var done = false;
-    function onPlayerStateChange(event) {if (event.data == YT.PlayerState.PLAYING && !done) {setTimeout(stopVideo, 6000); done = true; }      }
+    function onPlayerStateChange(event) {if (event.data == YT.PlayerState.PLAYING && !done) {setTimeout(stopVideo, szvIDs[vIndex].szSecsLen); done = true; }      }
     function stopVideo() {player.stopVideo();}</script>
 </body></html>
